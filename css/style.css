@@ -1,0 +1,214 @@
+/* Filename: style.css */
+/* Author: Gernot Nikolaus */
+/* Description: This file contains the custom styles for the Medieval Castles map project. */
+/* Credits: Gernot Nikolaus*/
+
+/* Styling for fixed header */
+h1 {
+    position: fixed;            /* Fixed position */
+    color: white;             /* Text color */
+    margin-left: 60%;           /* Left margin */
+    margin-top: 2%;             /* Top margin */
+    z-index: 2;                 /* Stack order */
+    font-weight: 700;           /* Font weight */
+    font-size: 64px;            /* Font size */
+    font-family: MedievalSharp; /* Custom font */
+    background-color: #E4C28C; 
+}
+
+/* Global styling for body */
+body {
+    width: 100%;                        /* Full width */
+    height: 100%;                       /* Full height */
+    margin: 5px;                        /* Margin around the body */
+    background-color: #FFC063;        /* Background color */
+    /* background-image: url("images/paper-background.png"); */ /* Uncomment for background image */
+    /* background-size: cover; */        /* Uncomment to cover background */
+}
+
+/* Styling for title image */
+#title-image {
+    position: absolute; /* Absolute position */
+    top: 10px;          /* Top position */
+    left: 10px;         /* Left position */
+    z-index: 1000;      /* Higher stack order */
+}
+
+/* Styling for map container */
+#map {
+    background-color: transparent; /* Transparent background */
+    height: 98%;                   
+    width: 98%;                    
+    left: 1%;                      /* 1% left */
+    overflow: hidden;              /* Hidden overflow */
+    position: fixed;               /* Fixed position */
+}
+
+/* Styling for map container */
+.map-container {
+    position: relative; /* Relative position */
+    height: 100%;       
+    width: 75%;         
+    float: left;        /* Floating left */
+}
+
+/* Styling for sidebar */
+.sidebar {
+    position: fixed;                  /* Fixed position */
+    height: 100%;                     
+    width: 30vw;                      /* Viewport width */
+    right: -25vw;                     /* Off-screen right */
+    background-image: url("images/Sidebar.png"); /* Sidebar background image */
+    background-size: cover;           /* Cover background */
+    text-align: center;               
+    display: flex;                    /* Flexbox layout */
+    flex-direction: column;           /* Column layout */
+    align-items: center;              /* Centered items */
+    transition: right 0.5s ease;      /* Smooth transition for right property */
+}
+
+/* Styling for text container */
+.text-container {
+    text-align: center;   
+    padding-top: 48px;    
+    padding-left: 84px;   
+    padding-right: 32px;  /* Right padding */
+    font-size: 16px;      
+    overflow: auto;       /* Auto overflow */
+}
+
+/* Styling for credits text container */
+.credits-text-container {
+    font-size: 16px;      /* Font size */
+    text-align: right;    /* Right-aligned text */
+    padding-right: 12px;
+}
+
+.credits-text-container h2 {
+    font-size: 16px;      /* Font size */
+}
+
+/* Styling for credits text container */
+.credits-text-container p {
+    font-size: 12px;      /* Font size */
+}
+
+/* Styling for century buttons */
+#century-buttons {
+    display: grid;             /* Grid layout */
+    align-items: center;       /* Centered items */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    padding-left: 84px;        /* Left padding */
+    gap: 1vw;                  /* Gap between buttons */
+}
+
+/* Styling for century buttons */
+.century-btn {
+    width: 5vw;                
+    height: 5vw;               
+    background-size: contain;  /* Contain background */
+    background-repeat: no-repeat; /* No repeat background */
+    background-position: center;  /* Centered background */
+    border: none;              /* No border */
+    /* border-radius: 8px;         */
+    cursor: pointer;           /* Pointer cursor */
+    display: flex;             /* Flex layout */
+    align-items: center;       /* Centered items */
+    justify-content: center;   /* Centered content */
+    color: transparent;        /* Transparent text color */
+    font-size: 1.5vw;          /* 1.5% font size */
+    text-align: center;        /* Centered text */
+    padding: 1vh;              /* Vertical padding */
+    box-sizing: border-box;    /* Border-box sizing */
+    transition: transform 0.2s; /* Smooth transform on hover */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Hover styling for century buttons */
+.century-btn:hover {
+    transform: scale(1.2);     /* Scale on hover */
+    /*color: white;               White text color on hover */
+    text-shadow: 1px 1px 2px black; /* Text shadow for readability */
+}
+
+/* Sidebar container hover */
+#sidebar-container:hover {
+    right: 0; /* Slide in sidebar on hover */
+}
+
+/* Styling for legend container */
+#legend-container {
+    position: fixed; /* Fixed position */
+    bottom: 0px;     /* Bottom position */
+    width: 300px;    
+    height: 750px;   
+    overflow: hidden; /* Hidden overflow */
+}
+
+/* Styling for legend hover image */
+#legend-hover-image {
+    position: absolute; /* Absolute position */
+    bottom: -55%;       /* Initially hidden */
+    left: 0;            /* Left position */
+    width: 100%;        
+    height: auto;       /* Auto height */
+    transition: bottom 0.5s ease; /* Smooth transition */
+}
+
+/* Hover effect for legend container */
+#legend-container:hover #legend-hover-image {
+    bottom: 0; /* Move image up to be fully visible on hover */
+}
+
+/* Styling for paragraph text inside text container */
+.text-container .p {
+    color: #3b3b3b; /* Text color */
+}
+
+/* Styling for overview map */
+#overview-map {
+    height: 80px; /* 80px height */
+    width: 80%;   /* 80% width */
+    align-items: center; /* Centered items */
+    margin-top: 20px;    /* Top margin */
+    background-color: red; /* Red background */
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 0; /* No bottom margin */
+    font-family: MedievalSharp; /* Custom font */
+}
+
+/* Custom popup */
+.custom-popup .leaflet-popup-content-wrapper,
+.custom-popup .leaflet-popup-tip {
+    background: transparent; /* Transparent background */
+    box-shadow: none;        /* No box shadow */
+}
+
+/* Custom popup content styling */
+.custom-popup .leaflet-popup-content {
+    margin: 0;               /* No margin */
+    display: flex;           /* Flex layout */
+    justify-content: center; /* Centered content */
+    align-items: center;     /* Centered items */
+    padding: 0;              /* No padding */
+}
+
+/* Styling for popup container */
+.popup-container {
+    width: 250px;           /* 250px width */
+    height: 200px;          /* 200px height */
+    background-size: contain; /* Contain background size */
+    background-position: center; /* Centered background */
+    background-repeat: no-repeat; /* No repeat background */
+    color: black;           /* Text color */
+    border-radius: 8px;     /* Rounded corners */
+    overflow: hidden;       /* Hidden overflow */
+    padding-left: 80px;     /* Left padding */
+    padding-right: 80px;    /* Right padding */
+    display: flex;          /* Flex layout */
+    align-items: center;    /* Centered items */
+    justify-content: center; /* Centered content */
+}

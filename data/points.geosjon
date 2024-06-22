@@ -1,0 +1,35 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.09, 51.505]
+            },
+            "properties": {
+                "popupContent": "I am a marker."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.1, 51.515]
+            },
+            "properties": {
+                "popupContent": "Another marker."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.12, 51.52]
+            },
+            "properties": {
+                "popupContent": "Yet another marker."
+            }
+        }
+    ]
+}
