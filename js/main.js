@@ -40,7 +40,7 @@ function updateCastlesByCenturyRange(startCentury, endCentury) {
         type: "FeatureCollection",
         features: castlesGeoJSON.features.filter(function (feature) {
             if(startCentury == 21) { //if century is 21 it shows all ruins
-                return feature.properties.century >= 0 && feature.properties.century <= 20;
+                return feature.properties.century > 0 && feature.properties.century <= 20;
             } else {
                 return feature.properties.century >= startCentury && feature.properties.century <= endCentury;
             }
